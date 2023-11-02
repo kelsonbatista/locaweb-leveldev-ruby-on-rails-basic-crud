@@ -1,10 +1,11 @@
 class TopicsController < ApplicationController
+  before_action :find_topic, only: [:show, :edit, :update, :destroy]
+
   def index
     @topics = Topic.all
   end
 
   def show
-    @topic = Topic.find_by(id: params[:id])
   end
 
   def new
@@ -21,11 +22,9 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    find_topic
   end
 
   def update
-    find_topic
     if @topic.update(topic_params)
       redirect_to topic_path(@topic)
     else
@@ -34,7 +33,6 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    find_topic
     @topic.destroy
     redirect_to topics_path
   end
