@@ -13,4 +13,3 @@ Para rodar a aplicação:
 - comando: rails db:create
 - comando: rails server
 - acessar http://localhost:3000
-- 
