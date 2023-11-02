@@ -1,0 +1,7 @@
+<div>
+  <h1>Editar Tópico</h1>
+  <%= form_for @topic do |f| %>
+    <%= render partial: "form", locals: { f: f } %>
+  <% end %>
+  <%= link_to "Voltar", topics_path %>
+</div>

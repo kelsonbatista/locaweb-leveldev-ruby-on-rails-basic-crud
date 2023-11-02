@@ -16,6 +16,16 @@ class TopicsController < ApplicationController
     redirect_to topic_path(@topic)
   end
 
+  def edit
+    @topic = Topic.find_by(id: params[:id])
+  end
+
+  def update
+    @topic = Topic.find_by(id: params[:id])
+    @topic.update(topic_params)
+    redirect_to topic_path(@topic)
+  end
+
   private
 
   def topic_params
