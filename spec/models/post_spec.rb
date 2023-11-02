@@ -13,5 +13,8 @@ describe Post do
       expect(subject.valid?).to eq(true)
       expect(subject).to be_valid
     end
+
+    it { should validate_presence_of(:title) }
+
   end
 end

@@ -56,10 +56,6 @@ group :development do
   # fake data
   gem "faker"
 
-  # testes
-  gem "rspec-rails", "~> 6.0.0"
-  gem "shoulda-matchers", "~> 5.0"
-
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -72,6 +68,9 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+    # testes
+  gem "rspec-rails", "~> 6.0.0"
+  gem "shoulda-matchers", "~> 5.0"
 end
 
 gem "hotwire-rails", "~> 0.1.3"
