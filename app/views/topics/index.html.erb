@@ -1,8 +1,8 @@
 <div>
   <h1>Topics</h1>
   <ul>
-    <% @topics.each do |topic| %>
-      <li><%= topic.title %></li>
+    <% @topics.each do |t| %>
+      <li><%= render t, locals: {topic: t} %></li>
     <% end %>
   </ul>
   
