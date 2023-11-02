@@ -21,17 +21,17 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    @topic = Topic.find_by(id: params[:id])
+    find_topic
   end
 
   def update
-    @topic = Topic.find_by(id: params[:id])
+    find_topic
     @topic.update(topic_params)
     redirect_to topic_path(@topic)
   end
 
   def destroy
-    @topic = Topic.find_by(id: params[:id])
+    find_topic
     @topic.destroy
     redirect_to topics_path
   end
@@ -40,5 +40,9 @@ class TopicsController < ApplicationController
 
   def topic_params
     params.require(:topic).permit(:id, :title)
+  end
+
+  def find_topic
+    @topic = Topic.find_by(id: params[:id])
   end
 end
