@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root to: "topics#index"
 
   # get "/topics", to: "topics#index"
-  # get "/topics/:id", to: "topics#show"
-  resources :topics, only: [:index, :show]
+  # get "/topics/:id", to: "topics#show", as: :topic
+  # get "/topics/new", to: "topics#new", as: :new_topic
+  resources :topics, only: [:index, :show, :new, :create]
 end

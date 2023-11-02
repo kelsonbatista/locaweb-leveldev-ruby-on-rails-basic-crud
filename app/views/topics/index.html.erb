@@ -2,8 +2,8 @@
   <h1>Topics</h1>
   <ul>
     <% @topics.each do |t| %>
-      <li><%= render t %></li>
+      <li><%= render t %> <%= link_to "show", t %></li>
     <% end %>
   </ul>
-  
+  <%= link_to "Novo Tópico", new_topic_path %>
 </div>
