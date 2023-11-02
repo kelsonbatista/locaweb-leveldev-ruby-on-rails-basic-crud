@@ -3,7 +3,7 @@
   <%= form_for @topic do |f| %>
     <% if @topic.errors.any? %>
       <div style="color: red">
-        <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+        <h3><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h3>
         <ul>
           <% @topic.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
