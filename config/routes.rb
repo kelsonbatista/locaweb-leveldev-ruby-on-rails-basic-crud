@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   # get "/topics/new", to: "topics#new", as: :new_topic
   # get "/topics/:id/edit", to: "topics#edit", as: :edit_topic
   # get "/topics/:id", to: "topics#show", as: :topic
+  # patch "/topics/:id", to: "topics#update"
+  # put "/topics/:id", to: "topics#update"
   resources :topics, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 end

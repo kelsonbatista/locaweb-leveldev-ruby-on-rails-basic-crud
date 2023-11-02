@@ -26,8 +26,11 @@ class TopicsController < ApplicationController
 
   def update
     find_topic
-    @topic.update(topic_params)
-    redirect_to topic_path(@topic)
+    if @topic.update(topic_params)
+      redirect_to topic_path(@topic)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
