@@ -10,3 +10,6 @@
 <div>
   <%= link_to "Voltar" , topics_path %> <%= link_to "Editar" , edit_topic_path(@topic) %>
 </div>
+<div>
+  <%= button_to "Remover tópico", @topico, method: :delete, data: { turbo_confirm: "Tem certeza?" } %>
+</div>
