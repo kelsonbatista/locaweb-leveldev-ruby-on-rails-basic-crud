@@ -13,7 +13,11 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.create(topic_params)
-    redirect_to topic_path(@topic)
+    if @topic
+      redirect_to topic_path(@topic)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
