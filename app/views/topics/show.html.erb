@@ -1,4 +1,9 @@
 <div>
+  <% if notice.present? %>
+    <h4 style="color: green"><%= notice %></h4>
+  <% end %>
+</div>
+<div>
   <h1><%= @topic.title %></h1>
 </div>
 

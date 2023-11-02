@@ -15,6 +15,7 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
+      flash[:notice] = "Topic created successfully"
       redirect_to topic_path(@topic)
     else
       render :new, status: :unprocessable_entity
@@ -26,6 +27,7 @@ class TopicsController < ApplicationController
 
   def update
     if @topic.update(topic_params)
+      flash[:notice] = "Topic updated successfully"
       redirect_to topic_path(@topic)
     else
       render :edit, status: :unprocessable_entity
