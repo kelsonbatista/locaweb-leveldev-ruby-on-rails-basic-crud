@@ -56,6 +56,9 @@ group :development do
   # fake data
   gem "faker"
 
+  # testes
+  gem "rspec-rails", "~> 6.0.0"
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
